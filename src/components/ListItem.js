@@ -1,13 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from './Button/Button'
 
 function ListItem({todo, onChange}) {
     
     return (
-        <label htmlFor={ 'check' + todo.id } className='list-item'>
+        <div className='list-item'>
             <span>{ todo.text }</span>
-            <input type='checkbox' name='done' id={ 'check' + todo.id } checked={todo.done} onChange={!todo.done ? (e) => {onChange(todo, e)} : () => {}}/>
-        </label>
+            <Button disabled={todo.done ? true : false} onClick={!todo.done ? (e) => {onChange(todo, e)} : () => {}}>
+                Done
+            </Button>
+        </div>
     )
 }
 

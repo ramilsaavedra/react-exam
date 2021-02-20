@@ -12,7 +12,8 @@ function TodoList() {
 
     const onItemClick = (todo, event) => {
         const index = todosState.findIndex(todoState => todoState.id === todo.id);
-        todosState[index] = {...todosState[index], [event.target.name]: event.target.value ? 1 : 0}
+        todosState[index] = {...todosState[index], done: 1}
+        alert('Task done');
         setTodosState([...todosState])
     }
 
