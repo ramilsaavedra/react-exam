@@ -1,0 +1,39 @@
+/* colors */
+.button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.button {
+    color: white;
+    background: #0b6bf2;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    border-color: #0b6bf2;
+}
+
+.button:focus {
+    outline-color: #0b6bf2;
+    border-color: #0b6bf2;
+    box-shadow: 2px 2px rgba(46, 91, 255, .6);
+}
+
+.button:focus:active {
+    background: #0243eb;
+    outline-color: #2e5bff;
+    outline-width: 2px;
+    box-shadow: 1px 1px 1px 1px rgba(46, 91, 255, .4);
+}
+
+.button:disabled {
+    background: #dbe9fd;
+}
