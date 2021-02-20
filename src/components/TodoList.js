@@ -1,27 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import List from './List';
-import sampleData from '../sampleData/sampleData';
-
-function TodoList() {
-    const [todosState, setTodosState] = useState([]);
-
-    useEffect(() => {
-        setTodosState(sampleData)
-    }, [])
+import React from 'react'
+import ListItem from './ListItem';
+import PropTypes from 'prop-types';
 
 
-    const onItemClick = (todo, event) => {
-        const index = todosState.findIndex(todoState => todoState.id === todo.id);
-        todosState[index] = {...todosState[index], done: 1}
-        alert('Task done');
-        setTodosState([...todosState])
-    }
+function TodoList({todos, onItemClick}) {
 
     return (
-        <>
-            <List todos={todosState} onItemClick={onItemClick}/>
-        </>
+        <div className='list'>
+            { 
+                todos.map((todo, index) => (
+                    <ListItem key={index} todo={todo} onChange={onItemClick}/>
+                ))
+            }
+        </div>
     )
+}
+
+TodoList.propTypes = {
+    todos: PropTypes.array,
+    onItemClick: PropTypes.func
 }
 
 export default TodoList

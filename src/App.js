@@ -1,12 +1,12 @@
 import './App.css';
 import ButtonWrap from './components/ButtonWrap';
-import TodoList from './components/TodoList';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
     <div className="App">
         <h1>Todo List</h1>
-        <TodoList />
+        <HomePage />
         <ButtonWrap />
     </div>
   );
