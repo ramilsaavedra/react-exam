@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function ListItem({todo, onChange}) {
     
@@ -8,6 +9,11 @@ function ListItem({todo, onChange}) {
             <input type='checkbox' name='done' id={ 'check' + todo.id } checked={todo.done} onChange={(e) => {onChange(todo, e) } }/>
         </label>
     )
+}
+
+ListItem.propTypes = {
+    todo: PropTypes.object.isRequired,
+    onChange: PropTypes.func
 }
 
 export default ListItem

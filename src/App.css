@@ -4,7 +4,7 @@
 }
 
 .App {
-  width: 40%;
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
 }
@@ -15,6 +15,7 @@
     border-radius: 2px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .list-item {
@@ -32,4 +33,12 @@
 
 .list-item input {
   margin-left: 10px;
+}
+
+.button-wrap {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

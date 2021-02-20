@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ListItem from './ListItem';
+import PropTypes from 'prop-types'
 
 
 function List({todos}) {
@@ -25,6 +26,10 @@ function List({todos}) {
             }
         </div>
     )
+}
+
+List.propTypes = {
+    todos: PropTypes.array,
 }
 
 export default List
